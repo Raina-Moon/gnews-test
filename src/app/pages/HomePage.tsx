@@ -3,15 +3,22 @@ import NewsCard from "../../entities/ui/NewsCard";
 import { useTopNewsQuery } from "../../entities/article/hooks";
 import styled from "styled-components";
 import NewsSearchBar from "../../entities/ui/NewsSearchBar";
-import { useSearchArticles } from "../../entities/search/hooks";
+import { useDebounce, useSearchArticles } from "../../entities/search/hooks";
 
 const HomePage = () => {
   const [query, setQuery] = useState("");
-  const q = query.trim();
+  const debounced = useDebounce(query, 300);
+  const q = debounced.trim();
   const { data: top } = useTopNewsQuery();
-  const { data: searchResults } = useSearchArticles(q);
+  const {
+    data: searchResults,
+    isLoading: searchLoading,
+    isFetching: searchFetching,
+  } = useSearchArticles(q);
 
   const articles = q ? searchResults : top;
+
+  if (q && (searchLoading || searchFetching)) return <div>Searching…</div>;
 
   return (
     <div>
