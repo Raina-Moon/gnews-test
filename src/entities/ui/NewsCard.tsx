@@ -1,15 +1,17 @@
 import React from "react";
 import type { ArticleItem } from "../article/types";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 interface NewsCardProps {
   article: ArticleItem;
 }
 
 const NewsCard: React.FC<NewsCardProps> = ({ article }) => {
+  const navigate = useNavigate();
   return (
     <ListWrapper key={article.id}>
-      <a href={article.url} target="_blank" rel="noopener noreferrer">
+      <a onClick={() => navigate(`/article/${article.id}`)}>
         <h3>{article.title}</h3>
         {article.image && (
           <img
@@ -42,7 +44,7 @@ const ListWrapper = styled.li`
   justify-content: center;
   align-items: center;
   gap: 15px;
-  
+
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -53,6 +55,7 @@ const ListWrapper = styled.li`
     text-decoration: none;
     color: inherit;
     gap: 10px;
+    cursor: pointer;
   }
 
   h3 {
@@ -69,4 +72,4 @@ const ListWrapper = styled.li`
   img {
     border-radius: 8px;
   }
-`
+`;
