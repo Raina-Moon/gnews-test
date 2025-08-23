@@ -23,6 +23,8 @@ const HomePage = () => {
   return (
     <div>
       <NewsSearchBar query={query} onSearch={setQuery} />
+      {searchResults &&
+        <p>Results: {searchResults?.articles.length}</p>}
       <ListWrapper>
         {articles?.articles.map((article) => (
           <NewsCard article={article} />
