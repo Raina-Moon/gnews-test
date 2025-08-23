@@ -22,9 +22,10 @@ const HomePage = () => {
 
   return (
     <div>
-      <NewsSearchBar query={query} onSearch={setQuery} />
-      {searchResults &&
-        <p>Results: {searchResults?.articles.length}</p>}
+      <SearchBarWrapper>
+        <NewsSearchBar query={query} onSearch={setQuery} />
+        {searchResults && <p>Results: {searchResults?.articles.length}</p>}
+      </SearchBarWrapper>
       <ListWrapper>
         {articles?.articles.map((article) => (
           <NewsCard article={article} />
@@ -44,4 +45,20 @@ const ListWrapper = styled.ul`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+`;
+
+const SearchBarWrapper = styled.div`
+margin: 20px auto;
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  p{
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+    text-align: left;
+  }
 `;
