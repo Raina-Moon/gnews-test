@@ -29,6 +29,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@eslint/js", "npm:9.34.0"],\
+          ["@tanstack/react-query", "virtual:e6d08f0ec0081488bfa23cae70fcfad0498fc1e4aa006dd20ffe9d64502d082026c2cc67af64f57a7dbc9050dbbdf7fe460021030b0e8855f3f6a38c051a55fa#npm:5.85.5"],\
           ["@testing-library/react", "virtual:e6d08f0ec0081488bfa23cae70fcfad0498fc1e4aa006dd20ffe9d64502d082026c2cc67af64f57a7dbc9050dbbdf7fe460021030b0e8855f3f6a38c051a55fa#npm:16.3.0"],\
           ["@types/react", "npm:19.1.11"],\
           ["@types/react-dom", "virtual:e6d08f0ec0081488bfa23cae70fcfad0498fc1e4aa006dd20ffe9d64502d082026c2cc67af64f57a7dbc9050dbbdf7fe460021030b0e8855f3f6a38c051a55fa#npm:19.1.7"],\
@@ -1072,6 +1073,38 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/unplugged/@rollup-rollup-win32-x64-msvc-npm-4.48.0-cc167aaa12/node_modules/@rollup/rollup-win32-x64-msvc/",\
         "packageDependencies": [\
           ["@rollup/rollup-win32-x64-msvc", "npm:4.48.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@tanstack/query-core", [\
+      ["npm:5.85.5", {\
+        "packageLocation": "./.yarn/cache/@tanstack-query-core-npm-5.85.5-d322b63c1a-344670ac11.zip/node_modules/@tanstack/query-core/",\
+        "packageDependencies": [\
+          ["@tanstack/query-core", "npm:5.85.5"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@tanstack/react-query", [\
+      ["npm:5.85.5", {\
+        "packageLocation": "./.yarn/cache/@tanstack-react-query-npm-5.85.5-3964ced541-7518cd624f.zip/node_modules/@tanstack/react-query/",\
+        "packageDependencies": [\
+          ["@tanstack/react-query", "npm:5.85.5"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:e6d08f0ec0081488bfa23cae70fcfad0498fc1e4aa006dd20ffe9d64502d082026c2cc67af64f57a7dbc9050dbbdf7fe460021030b0e8855f3f6a38c051a55fa#npm:5.85.5", {\
+        "packageLocation": "./.yarn/__virtual__/@tanstack-react-query-virtual-f51e11a825/0/cache/@tanstack-react-query-npm-5.85.5-3964ced541-7518cd624f.zip/node_modules/@tanstack/react-query/",\
+        "packageDependencies": [\
+          ["@tanstack/query-core", "npm:5.85.5"],\
+          ["@tanstack/react-query", "virtual:e6d08f0ec0081488bfa23cae70fcfad0498fc1e4aa006dd20ffe9d64502d082026c2cc67af64f57a7dbc9050dbbdf7fe460021030b0e8855f3f6a38c051a55fa#npm:5.85.5"],\
+          ["@types/react", "npm:19.1.11"],\
+          ["react", "npm:19.1.1"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2716,6 +2749,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@eslint/js", "npm:9.34.0"],\
+          ["@tanstack/react-query", "virtual:e6d08f0ec0081488bfa23cae70fcfad0498fc1e4aa006dd20ffe9d64502d082026c2cc67af64f57a7dbc9050dbbdf7fe460021030b0e8855f3f6a38c051a55fa#npm:5.85.5"],\
           ["@testing-library/react", "virtual:e6d08f0ec0081488bfa23cae70fcfad0498fc1e4aa006dd20ffe9d64502d082026c2cc67af64f57a7dbc9050dbbdf7fe460021030b0e8855f3f6a38c051a55fa#npm:16.3.0"],\
           ["@types/react", "npm:19.1.11"],\
           ["@types/react-dom", "virtual:e6d08f0ec0081488bfa23cae70fcfad0498fc1e4aa006dd20ffe9d64502d082026c2cc67af64f57a7dbc9050dbbdf7fe460021030b0e8855f3f6a38c051a55fa#npm:19.1.7"],\
